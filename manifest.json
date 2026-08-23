@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "AI Session Token Extractor",
+  "name": "Ai Token Extractor",
   "version": "1.0.0",
   "description": "Extract bearer tokens from web sessions for AI providers",
   "permissions": [
