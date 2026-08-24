@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Ai Token Extractor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extract bearer tokens from web sessions for AI providers",
   "permissions": [
     "storage",
@@ -11,11 +11,7 @@
   ],
   "host_permissions": [
     "https://chat.deepseek.com/*",
-    "https://platform.openai.com/*",
-    "https://api.anthropic.com/*",
-    "https://console.groq.com/*",
-    "https://api.mistral.ai/*",
-    "https://dashboard.cohere.com/*"
+    "https://www.kimi.ai/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -32,11 +28,7 @@
     {
       "matches": [
         "https://chat.deepseek.com/*",
-        "https://platform.openai.com/*",
-        "https://api.anthropic.com/*",
-        "https://console.groq.com/*",
-        "https://api.mistral.ai/*",
-        "https://dashboard.cohere.com/*"
+        "https://www.kimi.ai/*"
       ],
       "js": ["content.js"],
       "run_at": "document_start"

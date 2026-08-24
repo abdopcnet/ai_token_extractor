@@ -6,11 +6,7 @@ let tokenStore = {};
 // Provider detection patterns
 const PROVIDER_PATTERNS = [
   { pattern: /chat\.deepseek\.com/, provider: 'deepseek' },
-  { pattern: /platform\.openai\.com/, provider: 'openai' },
-  { pattern: /api\.anthropic\.com/, provider: 'anthropic' },
-  { pattern: /console\.groq\.com/, provider: 'groq' },
-  { pattern: /api\.mistral\.ai/, provider: 'mistral' },
-  { pattern: /dashboard\.cohere\.com/, provider: 'cohere' },
+  { pattern: /www\.kimi\.ai/, provider: 'kimi' },
 ];
 
 // Detect provider from URL
@@ -54,11 +50,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
   {
     urls: [
       'https://chat.deepseek.com/*',
-      'https://platform.openai.com/*',
-      'https://api.anthropic.com/*',
-      'https://console.groq.com/*',
-      'https://api.mistral.ai/*',
-      'https://dashboard.cohere.com/*'
+      'https://www.kimi.ai/*'
     ],
     types: ['xmlhttprequest']
   },
