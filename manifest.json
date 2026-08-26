@@ -1,17 +1,20 @@
 {
   "manifest_version": 3,
   "name": "Ai Token Extractor",
-  "version": "1.1.0",
-  "description": "Extract bearer tokens from web sessions for AI providers",
+  "version": "1.4.1",
+  "description": "Auto-detect AI provider and extract OmniRoute credentials (Qwen includes bx-ua)",
   "permissions": [
     "storage",
     "activeTab",
-    "webRequest",
-    "declarativeNetRequest"
+    "tabs",
+    "cookies",
+    "webRequest"
   ],
   "host_permissions": [
     "https://chat.deepseek.com/*",
-    "https://www.kimi.ai/*"
+    "https://www.kimi.ai/*",
+    "https://www.kimi.com/*",
+    "https://chat.qwen.ai/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -28,7 +31,9 @@
     {
       "matches": [
         "https://chat.deepseek.com/*",
-        "https://www.kimi.ai/*"
+        "https://www.kimi.ai/*",
+        "https://www.kimi.com/*",
+        "https://chat.qwen.ai/*"
       ],
       "js": ["content.js"],
       "run_at": "document_start"
